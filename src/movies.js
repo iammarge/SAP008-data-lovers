@@ -16,7 +16,7 @@ function showFilms(data) {
            <li><strong>Description: </strong>${item.description}</li>
            <li><strong>Director: </strong>${item.director}</li>
            <li><strong>Producer: </strong>${item.producer}</li>
-           <li><strong>Release date: </strong>${item.release_date}</li>      
+           <li><strong>Release date: </strong>${item.release_date}</li>
            <li><strong>Score: </strong>${item.rt_score}</li>
          </ul>
           </div>
@@ -27,4 +27,25 @@ function showFilms(data) {
   document.getElementById('cards').innerHTML = filmsInfo;
 }
 
-showFilms(movies)
+showFilms(movies);
+
+// ORDENAÇÃO DIRETORES// 
+
+/*const selectDirector = document.querySelector('#order');
+selectDirector.addEventListener('change', (event) => {
+  const director = event.target.value
+  let filter = movies
+    if (director != "todos") {
+    filter = (movies, director)
+    }
+  showFilms(filter)
+})*/
+
+const directorsList = data.map(film => films.director)
+const setDirectors = [...new Set(directorsList)]
+const arrayDirectors = Array.from(setDirectors)
+const directorFilter = document.getElementById("directors")
+
+arrayDirectors.forEach(director => {
+  directorFilter.innerHTML += `<option value=${director} class="director">${director}</option>`
+})
