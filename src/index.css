@@ -1,7 +1,17 @@
+body{
+  background-color: rgb(255, 255, 255);
+  background-attachment: fixed;
+  padding: 0%;
+  margin: 0%;
+  font-size: 100%;
+}
+
+header img {
+  width: 100%;
+}
+
 #divBusca{
   background-color:#8ba0a0f3;
-  border:solid 1px;
-  border-radius:15px;
   width:300px;
 }
 

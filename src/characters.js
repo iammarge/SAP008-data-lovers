@@ -1,4 +1,4 @@
-import {  alphabeticOrder, buscarName } from './data.js';
+import { alphabeticOrder } from './data.js';
 import data from './data/ghibli/ghibli.js';
 let movies = data.films
 let characters = movies.reduce(function(chars, film){
@@ -19,7 +19,7 @@ function showCharacters(data) {
           <p class="charactersName"><strong>${item.name}</strong></p>
           <img src="${item.img}"class="posterCharacters">
          </div>
-        <div class="flipCardCack">
+        <div class="flipCardBack">
          <ul class="cardInfos">
            <li><strong>${item.name}</strong></li>
            <li><strong>Gender: </strong>${item.gender}</li>

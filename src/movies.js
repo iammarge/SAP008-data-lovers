@@ -1,16 +1,17 @@
 import data from './data/ghibli/ghibli.js';
+
+// Lógica mostrar filmes //
 let movies = data.films
 
 function showFilms(data) {
   const filmsInfo = data.map((item) => {
     return `
   <div class="flipCard">
-        <div class="flipCardInner">
          <div class="flipCardFront">
           <p class="titleOfFilm"><strong>${item.title}</strong></p>
           <img src="${item.poster}"class="poster-card">
          </div>
-        <div class="flipCardCack">
+        <div class="flipCardBack">
          <ul class="cardInfos">
            <li><strong>${item.title}</strong></li>
            <li><strong>Description: </strong>${item.description}</li>
@@ -19,7 +20,6 @@ function showFilms(data) {
            <li><strong>Release date: </strong>${item.release_date}</li>
            <li><strong>Score: </strong>${item.rt_score}</li>
          </ul>
-          </div>
           </div>
         </div>
   `}).join('')
@@ -30,22 +30,3 @@ function showFilms(data) {
 showFilms(movies);
 
 // ORDENAÇÃO DIRETORES// 
-
-/*const selectDirector = document.querySelector('#order');
-selectDirector.addEventListener('change', (event) => {
-  const director = event.target.value
-  let filter = movies
-    if (director != "todos") {
-    filter = (movies, director)
-    }
-  showFilms(filter)
-})*/
-
-const directorsList = data.map(film => films.director)
-const setDirectors = [...new Set(directorsList)]
-const arrayDirectors = Array.from(setDirectors)
-const directorFilter = document.getElementById("directors")
-
-arrayDirectors.forEach(director => {
-  directorFilter.innerHTML += `<option value=${director} class="director">${director}</option>`
-})

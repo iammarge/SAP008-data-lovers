@@ -32,4 +32,11 @@ export const alphabeticOrder = (data, order) => {
       return 1;
     }})
   }
+};
+
+const filterDirectors = (data, value) => {
+  data.filter((films) => {
+    return data.value === director
+  }) 
+
 }
