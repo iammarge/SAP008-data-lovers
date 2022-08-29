@@ -6,12 +6,12 @@ let movies = data.films
 function showFilms(data) {
   const filmsInfo = data.map((item) => {
     return `
-  <div class="flipCard">
-         <div class="flipCardFront">
+  <div class="cardStructure">
+         <div class="cardFront">
           <p class="titleOfFilm"><strong>${item.title}</strong></p>
           <img src="${item.poster}"class="poster-card">
          </div>
-        <div class="flipCardBack">
+        <div class="cardBack">
          <ul class="cardInfos">
            <li><strong>${item.title}</strong></li>
            <li><strong>Description: </strong>${item.description}</li>
