@@ -19,7 +19,7 @@ function showCharacters(data) {
           <p class="charactersName"><strong>${item.name}</strong></p>
           <img src="${item.img}"class="posterCharacters">
          </div>
-        <div class="flipCardCack">
+        <div class="flipCardBack">
          <ul class="cardInfos">
            <li><strong>${item.name}</strong></li>
            <li><strong>Gender: </strong>${item.gender}</li>
@@ -44,7 +44,7 @@ const selectElement = document.querySelector('#order');
 
 selectElement.addEventListener('change', (event) => {
   const value = event.target.value
-  const orderedList = alphabeticOrderChars(characters, value)
+  const orderedList = alphabeticOrder(characters, value)
   showCharacters(orderedList)
 });
 
