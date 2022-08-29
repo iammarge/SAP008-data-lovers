@@ -6,64 +6,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filmes</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
     <header>
-        <div class="imgMenu"><img src="./img/Figura-5-O-Logotipo-do-Estudio-Ghibli-A-Imagem-do-Personagem-Totoro-Tornou-se-Marca.png" alt="logo studio ghibli"></div>
+        <div class="imgMenu"><img
+                src="./img/Figura-5-O-Logotipo-do-Estudio-Ghibli-A-Imagem-do-Personagem-Totoro-Tornou-se-Marca.png"
+                alt="logo studio ghibli"></div>
     </header>
 
     <nav>
-      <div id="divSearch">
-        <input type="text" id="txtSearch" placeholder="Buscar... 🔎"/>
-      </div>
-      <ul class="navMenu">
+        <ul class="navMenu">
             <li><a href="./index.html">Início</a></li>
             <li><a href="./movies.html">Filmes</a></li>
             <li><a href="./characters.html">Personagens</a></li>
-      </ul>
-    </nav>
+        </ul>
 
-    <section class="filterMovies">
+        <button id="orderAz" class="btn">Ordenar A - Z</button>
+        <button id="orderZa" class="btn">Ordenar Z - A</button>
 
-        <div class="filterDiv">
-            <label for="orderBtn" class="filterLabel">ORDENAR</label>
-        </div>
-
-        <select class="dropDownMenu" name="order" id="order">
-            <optgroup label="Ordem Alfabética">
-              <option value="default" selected class="title">Selecione</option>
-                <option value="asc_title" class="title">A - Z</option>
-                <option value="desc_title" class="title">Z - A</option>
-            </optgroup>
-
-            <optgroup label="Data de lançamento">
-                <option value="asc_date" class="release_date">Mais antigos</option>
-                <option value="desc_date" class="release_date">Mais recentes</option>
-            </optgroup>
-
-            <optgroup label="Direção">
-                <option value="Hayao Miyazaki">Hayao Miyazaki</option>
-                <option value="Isao Takahata">Isao Takahata</option>
-                <option value="Yoshifumi Kondō">Yoshifumi Kondō</option>
-                <option value="Hiroyuki Morita">Hiroyuki Morita</option>
-                <option value="Gorō Miyazaki">Gorō Miyazaki</option>
-                <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
-            </optgroup>
-
-            <optgroup label="Nota de avaliação">
-                <option value="asc_score" class="rt_score">Menor nota - Maior nota</option>
-                <option value="desc_score" class="rt_score">Maior nota - Menor nota</option>
-            </optgroup>
+        <select class="relaseDate">
+            <option value="orderDate" selected disabled>Data de lançamento</option>
+            <option class="ascending" value="release_date">Mais antigos</option>
+            <option class="descending" value="release_date">Mais recentes</option>
+        </select>
+        <select class="directors">
+            <option value="" selected disabled>Direção</option>
+            <option class="selectDirector" value="Hayao Miyazaki">Hayao Miyazaki</option>
+            <option class="selectDirector" value="Isao Takahata">Isao Takahata</option>
+            <option class="selectDirector" value="Yoshifumi Kondō">Yoshifumi Kondō</option>
+            <option class="selectDirector" value="Hiroyuki Morita">Hiroyuki Morita</option>
+            <option class="selectDirector" value="Gorō Miyazaki">Gorō Miyazaki</option>
+            <option class="selectDirector" value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
+        </select>
+        <select class="score">
+            <option value="orderScore" selected disabled>Nota de avaliação</option>
+            <option class="smallest" value="rt_score">Menor nota - Maior nota</option>
+            <option class="largest" value="rt_score">Maior nota - Menor nota</option>
         </select>
 
-    </section>
+        <div id="divBusca">
+            <input type="text" id="txtBusca" placeholder="Buscar... 🔎" />
+        </div>
+    </nav>
+
 
     <main class="poster">
         <div id="cards"></div>
-      </main>
+    </main>
 
     <script src="movies.js" type="module"></script>
 
