@@ -60,3 +60,4 @@ function filtroPesquisa(event) {
 searchTitles.addEventListener("keyup", filtroPesquisa);
 
 // ORDENAÇÃO DIRETORES//
+
