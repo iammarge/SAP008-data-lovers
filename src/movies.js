@@ -7,12 +7,12 @@ let movies = data.films
 function showFilms(data) {
   const filmsInfo = data.map((item) => {
     return `
-  <div class="flipCard">
-         <div class="flipCardFront">
+  <div class="cardStructure">
+         <div class="cardFront">
           <p class="titleOfFilm"><strong>${item.title}</strong></p>
           <img src="${item.poster}"class="poster-card">
          </div>
-        <div class="flipCardBack">
+        <div class="cardBack">
          <ul class="cardInfos">
            <li><strong>${item.title}</strong></li>
            <li><strong>Description: </strong>${item.description}</li>
@@ -29,6 +29,34 @@ function showFilms(data) {
 }
 
 showFilms(movies);
+//ORDER BY ALPHABETIC //
+
+const selectElement = document.querySelector('#order');
+
+selectElement.addEventListener('change', (event) => {
+  const value = event.target.value
+  const orderedList = alphabeticOrderMovies(movies, value)
+  showFilms(orderedList)
+});
+
+//ORDER BY ALPHABETIC //
+
+const selectElementScore = document.querySelector('#order');
+
+selectElementScore.addEventListener('change', (event) => {
+  const value = event.target.value
+  const orderedList = scoreOrder(movies, value)
+  showFilms(orderedList)
+});
+
+
+//SEARCH FILMS//
+const searchTitles = document.getElementById("txtSearch");
+function filtroPesquisa(event) {
+  const filmsByTitle = searchTitle(movies, event.target.value);
+  showFilms(filmsByTitle);
+}
+searchTitles.addEventListener("keyup", filtroPesquisa);
 
 //ORDER BY ALPHABETIC //
 

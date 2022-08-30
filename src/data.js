@@ -1,10 +1,12 @@
 
+/* filtro direção
 const filterDirectors = (data, value) => {
   data.filter((films) => {
     return data.value === director
   })
 
-}
+}*/
+
 
 
 // SORT BY KEY//
@@ -39,5 +41,6 @@ export const searchByKey = (data, key, value) => {
   const resultSearch = data.filter((item) => item[key].toLowerCase().includes(value.toLowerCase()));
   return resultSearch;
 }
+
 
 
