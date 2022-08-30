@@ -26,14 +26,14 @@
 
         <select class="titleFilms">
           <option value="orderTitle" selected disabled>Ordem Alfabética</option>
-          <option class="ascending" value="title">Ordenar A - Z</option>
-          <option class="descending" value="title">Ordenar Z - A</option>
+          <option class="title" value="ascending">Ordenar A - Z</option>
+          <option class="title" value="descending">Ordenar Z - A</option>
         </select>
 
         <select class="releaseDate">
             <option value="orderDate" selected disabled>Data de lançamento</option>
-            <option class="ascending" value="release_date">Mais antigos</option>
-            <option class="descending" value="release_date">Mais recentes</option>
+            <option class="release_date" value="ascending">Mais antigos</option>
+            <option class="release_date" value="descending">Mais recentes</option>
         </select>
 
         <select class="directors">
@@ -47,8 +47,8 @@
         </select>
         <select class="score">
             <option value="orderScore" selected disabled>Nota de avaliação</option>
-            <option class="ascending" value="rt_score">Menor nota - Maior nota</option>
-            <option class="descending" value="rt_score">Maior nota - Menor nota</option>
+            <option class="rt_score" value="ascending">Menor nota - Maior nota</option>
+            <option class="rt_score" value="descending">Maior nota - Menor nota</option>
         </select>
 
         <div id="divBusca">
@@ -61,8 +61,19 @@
         <div id="cards"></div>
     </main>
 
-    <script src="movies.js" type="module"></script>
 
+    <footer> Desenvolvido por
+      <ul>
+        <li>
+          <a href="https://github.com/iammarge" target="_blank"> Marjorie Santos</a>
+        </li>
+        <li>
+          <a href="https://github.com/asmih" target="_blank">Michelle Santana</a>
+        </li>
+      </ul>
+      <p> Laboratória - SAP008</p>
+     </footer>
+     <script src="movies.js" type="module"></script>
 </body>
 
 </html>
