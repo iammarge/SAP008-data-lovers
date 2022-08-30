@@ -12,9 +12,7 @@
 <body>
 
     <header>
-        <div class="imgMenu"><img
-                src="./img/Figura-5-O-Logotipo-do-Estudio-Ghibli-A-Imagem-do-Personagem-Totoro-Tornou-se-Marca.png"
-                alt="logo studio ghibli">
+        <div class="imgMenu"><img src="./img/Figura-5-O-Logotipo-do-Estudio-Ghibli-A-Imagem-do-Personagem-Totoro-Tornou-se-Marca.png" alt="logo studio ghibli">
         </div>
         <nav>
             <ul class="navMenu" style="list-style: none;">
@@ -25,8 +23,8 @@
 
             <select class="charactersName">
                 <option value="orderName" selected disabled>Ordem Alfabética</option>
-                <option class="asc" value="name">Ordenar A - Z</option>
-                <option class="desc" value="name">Ordenar Z - A</option>
+                <option class="name" value="ascending">Ordenar A - Z</option>
+                <option class="name" value="descending">Ordenar Z - A</option>
             </select>
 
             <select class="selectGender">
@@ -36,14 +34,24 @@
             </select>
 
             <div id="divBusca">
-                <input type="text" id="txtBusca" placeholder="Buscar... 🔎" />
+                <input type="text" id="txtSearch" placeholder="Buscar... 🔎" />
             </div>
         </nav>
     </header>
     <main class="poster">
         <div id="cards"></div>
     </main>
-
+    <footer> Desenvolvido por
+      <ul>
+        <li>
+          <a href="https://github.com/iammarge" target="_blank"> Marjorie Santos</a>
+        </li>
+        <li>
+          <a href="https://github.com/asmih" target="_blank">Michelle Santana</a>
+        </li>
+      </ul>
+      <p> Laboratória - SAP008</p>
+     </footer>
     <script src="characters.js" type="module"></script>
 
 </body>
