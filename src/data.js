@@ -34,9 +34,11 @@ export const alphabeticOrder = (data, order) => {
   }
 };
 
+/* filtro direção
 const filterDirectors = (data, value) => {
   data.filter((films) => {
     return data.value === director
   }) 
 
-}
+}*/
+

@@ -14,12 +14,12 @@ let characters = movies.reduce(function(chars, film){
 function showCharacters(data) {
   const charactersInfo = data.map((item) => {
     return `
-  <div class="flipCard">
-         <div class="flipCardFront">
+  <div class="cardStructure">
+         <div class="cardFront">
           <p class="charactersName"><strong>${item.name}</strong></p>
           <img src="${item.img}"class="posterCharacters">
          </div>
-        <div class="flipCardBack">
+        <div class="cardBack">
          <ul class="cardInfos">
            <li><strong>${item.name}</strong></li>
            <li><strong>Gender: </strong>${item.gender}</li>
@@ -40,7 +40,7 @@ showCharacters(characters)
 
 //ORDENAR //
 
-const selectElement = document.querySelector('#order');
+const selectElement = document.querySelector('#charactersName');
 
 selectElement.addEventListener('change', (event) => {
   const value = event.target.value
