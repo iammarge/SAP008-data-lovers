@@ -29,34 +29,6 @@ function showFilms(data) {
 }
 
 showFilms(movies);
-//ORDER BY ALPHABETIC //
-
-const selectElement = document.querySelector('#order');
-
-selectElement.addEventListener('change', (event) => {
-  const value = event.target.value
-  const orderedList = alphabeticOrderMovies(movies, value)
-  showFilms(orderedList)
-});
-
-//ORDER BY ALPHABETIC //
-
-const selectElementScore = document.querySelector('#order');
-
-selectElementScore.addEventListener('change', (event) => {
-  const value = event.target.value
-  const orderedList = scoreOrder(movies, value)
-  showFilms(orderedList)
-});
-
-
-//SEARCH FILMS//
-const searchTitles = document.getElementById("txtSearch");
-function filtroPesquisa(event) {
-  const filmsByTitle = searchTitle(movies, event.target.value);
-  showFilms(filmsByTitle);
-}
-searchTitles.addEventListener("keyup", filtroPesquisa);
 
 //ORDER BY ALPHABETIC //
 
