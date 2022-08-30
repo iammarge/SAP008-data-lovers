@@ -1,4 +1,4 @@
-import { alphabeticOrderMovies , scoreOrder, searchTitle} from './data.js';
+import { orderByKey , searchByKey} from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 // Lógica mostrar filmes //
@@ -32,29 +32,38 @@ showFilms(movies);
 
 //ORDER BY ALPHABETIC //
 
-const selectElement = document.querySelector('#order');
+const selectElement = document.querySelector('.titleFilms');
 
 selectElement.addEventListener('change', (event) => {
   const value = event.target.value
-  const orderedList = alphabeticOrderMovies(movies, value)
+  const orderedList = orderByKey(movies, 'title' , value)
   showFilms(orderedList)
 });
 
-//ORDER BY ALPHABETIC //
+//ORDER BY RELEASE DATE //
 
-const selectElementScore = document.querySelector('#order');
+const selectElementDate = document.querySelector('.releaseDate');
+
+selectElementDate.addEventListener('change', (event) => {
+  const value = event.target.value
+  const orderedList = orderByKey(movies, 'release_date' , value)
+  showFilms(orderedList)
+});
+
+//ORDER BY SCORE //
+
+const selectElementScore = document.querySelector('.score');
 
 selectElementScore.addEventListener('change', (event) => {
   const value = event.target.value
-  const orderedList = scoreOrder(movies, value)
+  const orderedList = orderByKey(movies, 'rt_score' , value)
   showFilms(orderedList)
 });
-
 
 //SEARCH FILMS//
 const searchTitles = document.getElementById("txtSearch");
 function filtroPesquisa(event) {
-  const filmsByTitle = searchTitle(movies, event.target.value);
+  const filmsByTitle = searchByKey(movies, 'title', event.target.value);
   showFilms(filmsByTitle);
 }
 searchTitles.addEventListener("keyup", filtroPesquisa);
