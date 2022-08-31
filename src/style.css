@@ -33,6 +33,18 @@
   margin: 3vw 0 2vw;
 }
 
-.cardInfos {
-  display: none;
+footer {
+  width: 100%;
+}
+
+.foot img {
+  position: absolute;
+}
+
+ul{
+text-align: center;
+}
+
+.foot p {
+  text-align: end;
 }
