@@ -25,7 +25,7 @@ function showFilms(data) {
         </div>
   `}).join('')
 
-  document.getElementById('cards').innerHTML = filmsInfo
+  document.getElementById('cards').innerHTML = filmsInfo;
 }
 
 showFilms(movies);

@@ -27,14 +27,14 @@
         <span>
             <select class="titleFilms">
                 <option value="orderTitle" selected disabled>Ordem Alfabética</option>
-                <option class="orderAz" value="title">Ordenar A - Z</option>
-                <option class="orderZa" value="title">Ordenar Z - A</option>
+                <option class="title" value="ascending">Ordenar A - Z</option>
+                <option class="title" value="descending">Ordenar Z - A</option>
             </select>
 
-            <select class="relaseDate">
+            <select class="releaseDate">
                 <option value="orderDate" selected disabled>Data de lançamento</option>
-                <option class="ascending" value="release_date">Mais antigos</option>
-                <option class="descending" value="release_date">Mais recentes</option>
+                <option class="release_date" value="ascending">Mais antigos</option>
+                <option class="release_date" value="descending">Mais recentes</option>
             </select>
 
             <select class="directors">
@@ -49,12 +49,12 @@
 
             <select class="score">
                 <option value="orderScore" selected disabled>Nota de avaliação</option>
-                <option class="smallest" value="rt_score">Menor nota - Maior nota</option>
-                <option class="largest" value="rt_score">Maior nota - Menor nota</option>
+                <option class="rt_score" value="ascending">Menor nota - Maior nota</option>
+                <option class="rt_score" value="descending">Maior nota - Menor nota</option>
             </select>
 
             <div id="divBusca">
-                <input type="text" id="txtBusca" placeholder="Buscar... 🔎" />
+                <input type="text" id="txtSearch" placeholder="Buscar... 🔎" />
             </div>
         </span>
     </nav>
