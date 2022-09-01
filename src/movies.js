@@ -118,4 +118,5 @@ selectDirector.addEventListener('change', (event) => {
   const value = event.target.value
   const directorFilter = filterDirectors(movies, value)
   infoCard(directorFilter)
-})
+}); 
+
