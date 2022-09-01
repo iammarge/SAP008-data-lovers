@@ -1,4 +1,4 @@
-import { orderByKey, searchByKey, filterDirectors } from './data.js';
+import { orderByKey, searchByKey, filterSelect } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 // Lógica mostrar filmes 
@@ -116,7 +116,7 @@ searchTitles.addEventListener("keyup", filtroPesquisa);
 const selectDirector = document.querySelector('.directors');
 selectDirector.addEventListener('change', (event) => {
   const value = event.target.value
-  const directorFilter = filterDirectors(movies, value)
+  const directorFilter = filterSelect(movies, 'director', value)
   infoCard(directorFilter)
 }); 
 

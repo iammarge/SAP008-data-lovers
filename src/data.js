@@ -1,8 +1,8 @@
 // SORT BY KEY//
 export const orderByKey = (data, key, order) => {
-  console.log(data, key, order)
+  const copy = [...data]
   if (order === "ascending") {
-      return data.sort((a, b) => {
+      return copy.sort((a, b) => {
     if (a[key] > b[key]) {
       return 1;
     }
@@ -13,7 +13,7 @@ export const orderByKey = (data, key, order) => {
   })}
 
   if (order === "descending") {
-      return data.sort((a, b) => {
+      return copy.sort((a, b) => {
     if (a[key] < b[key]) {
       return 1;
     }
@@ -31,20 +31,20 @@ export const searchByKey = (data, key, value) => {
   return resultSearch;
 }
 
-// FILTRO DIREÇÃO
-export const filterDirectors = (films, director) => {
-  return films.filter ((film) => {
-    return film.director === director
+// FILTRO 
+export const filterSelect = (films, key, value) => {
+  return films.filter ((select) => {
+    return select[key] === value
   })
 }
 
-// FILTRO GÊNERO
-export const filterGender = (films, gender) => {
+/* FILTRO GÊNERO
+export const filterGender = (films, key,  gender) => {
   return films.filter ((chars) => {
-    return chars.gender === gender
+    return chars[key] === gender
   })
 }
-
+*/
 
 /*CALCULO PERSONAGENS
 export const aggregateCal = (chars) => {
