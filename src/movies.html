@@ -24,11 +24,15 @@
             <li><a href="./characters.html" style="text-decoration:none">Personagens</a></li>
         </ul>
 
-        <span>
             <select class="titleFilms">
                 <option value="orderTitle" selected disabled>Ordem Alfabética</option>
+<<<<<<< HEAD
                 <option class="title" value="ascending">Ordenar A - Z</option>
                 <option class="title" value="descending">Ordenar Z - A</option>
+=======
+                <option class="orderAz" value="ascending">Ordenar A - Z</option>
+                <option class="orderZa" value="descending">Ordenar Z - A</option>
+>>>>>>> b31aa67f9a6320275ddfcd3508b960683ad0cde6
             </select>
 
             <select class="releaseDate">
@@ -56,26 +60,30 @@
             <div id="divBusca">
                 <input type="text" id="txtSearch" placeholder="Buscar... 🔎" />
             </div>
-        </span>
+        
     </nav>
 
 
-    <main class="poster">
+    <main>
         <div id="cards"></div>
+        <div class="backInfos"></div>
     </main>
 
+    <footer>
+        <div class="foot">
+        <img src="./img/lab-logo.png" alt="Logo Laboratória">
+        <ul style="list-style: none;">
+          <li>
+            Desenvolvido por
+            <a href="https://github.com/iammarge" target="_blank"> Marjorie Santos</a>
+            &
+            <a href="https://github.com/asmih" target="_blank">Michelle Santana</a>
+          </li>
+        </ul>
+        <p>SAP008</p>
+      </div>
+       </footer>
 
-    <footer> Desenvolvido por
-      <ul>
-        <li>
-          <a href="https://github.com/iammarge" target="_blank"> Marjorie Santos</a>
-        </li>
-        <li>
-          <a href="https://github.com/asmih" target="_blank">Michelle Santana</a>
-        </li>
-      </ul>
-      <p> Laboratória - SAP008</p>
-     </footer>
      <script src="movies.js" type="module"></script>
 </body>
 
