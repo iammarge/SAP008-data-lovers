@@ -1,14 +1,4 @@
 
-/* filtro direção
-const filterDirectors = (data, value) => {
-  data.filter((films) => {
-    return data.value === director
-  })
-
-}*/
-
-
-
 // SORT BY KEY//
 export const orderByKey = (data, key, order) => {
   console.log(data, key, order)
