@@ -23,7 +23,6 @@ function showFilms(data) {
 
 function printInfos(item) {
   return `
-<<<<<<< HEAD
    <div class="infoCards">
       <ul class="cardInfos" style="list-style: none;">
         <li><strong>${item.title}</strong></li>
@@ -35,19 +34,6 @@ function printInfos(item) {
       </ul>
       <button class="close">Sair</button>
     </div>
-=======
-  <div class="infoCards">
-         <ul class="cardInfos" style="list-style: none;">
-           <li><strong>${item.title}</strong></li>
-           <li><strong>Description: </strong>${item.description}</li>
-           <li><strong>Director: </strong>${item.director}</li>
-           <li><strong>Producer: </strong>${item.producer}</li>
-           <li><strong>Release date: </strong>${item.release_date}</li>
-           <li><strong>Score: </strong>${item.rt_score}</li>
-         </ul>
-         <button class="close">Sair</button>
-        </div>
->>>>>>> 680c40829a0ef1ec601906d1ef73664f735dfc0d
   `
 }
 
