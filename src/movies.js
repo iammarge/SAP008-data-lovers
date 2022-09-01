@@ -103,7 +103,6 @@ const selectElementScore = document.querySelector('.score');
 selectElementScore.addEventListener('change', (event) => {
   const value = event.target.value
   const orderedList = orderByScore(movies, value)
-  console.log(orderedList)
   infoCard(orderedList)
 });
 
