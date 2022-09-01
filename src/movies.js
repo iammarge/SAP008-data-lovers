@@ -9,10 +9,10 @@ const info = document.querySelector('#card');
 function showFilms(data) {
   const films = data.map((item) => {
     const structure = `
-       <div class="cardFront">
+       <div class="poster">
        <p class="titleOfFilm"><strong>${item.title}</strong></p>
          <button class= "btn" type="button">
-         <img src="${item.poster}"class="poster-card">
+         <img src="${item.poster}"class="posterCard">
         </button>
    </div>
       `;
@@ -23,7 +23,7 @@ function showFilms(data) {
 
 function printInfos(item) {
   return `
-  <div class="cardBack">
+  <div class="infoCards">
          <ul class="cardInfos" style="list-style: none;">
            <li><strong>${item.title}</strong></li>
            <li><strong>Description: </strong>${item.description}</li>
