@@ -1,5 +1,11 @@
 header img {
   width: 100%;
+  height: 20rem;
+}
+
+body {
+  font-family: 'Ubuntu Mono', monospace;
+  background-image:  ;
 }
 
 .navMenu {
@@ -10,6 +16,8 @@ header img {
   column-gap: 1vw;
   font-size: 1.2rem;
   font-weight: 600;
+  color: rgb(4, 103, 178);
+  list-style: none;
 }
 
 .about {
@@ -17,3 +25,6 @@ header img {
   width: 52%;
   font-size: 2rem;
 }
+
+
+
