@@ -28,6 +28,11 @@ header img {
   width:260px;
 }
 
+.poster {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr) ;
+}
+
 #cards {
   display: grid;
   grid-template-columns: repeat(5, 1fr);

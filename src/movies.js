@@ -4,17 +4,17 @@ import data from './data/ghibli/ghibli.js';
 // Lógica mostrar filmes
 
 let movies = data.films;
-const info = document.querySelector('#cards');
+const info = document.querySelector('#card');
 
 function showFilms(data) {
   const films = data.map((item) => {
     const structure = `
-       <div class="cardFront">
-       <p class="titleOfFilm"><strong>${item.title}</strong></p>
+      <div class="poster">
+        <p class="titleOfFilm"><strong>${item.title}</strong></p>
          <button class= "btn" type="button">
-         <img src="${item.poster}"class="poster-card">
+          <img src="${item.poster}"class="posterCard">
         </button>
-   </div>
+      </div>
       `;
     return structure;
   });
@@ -23,24 +23,22 @@ function showFilms(data) {
 
 function printInfos(item) {
   return `
-  <div class="cardBack">
-         <ul class="cardInfos" style="list-style: none;">
-           <li><strong>${item.title}</strong></li>
-           <li><strong>Description: </strong>${item.description}</li>
-           <li><strong>Director: </strong>${item.director}</li>
-           <li><strong>Producer: </strong>${item.producer}</li>
-           <li><strong>Release date: </strong>${item.release_date}</li>
-           <li><strong>Score: </strong>${item.rt_score}</li>
-         </ul>
-         <button class="close">Sair</button>
-        </div>
-
-showFilms(movies);
+   <div class="infoCards">
+      <ul class="cardInfos" style="list-style: none;">
+        <li><strong>${item.title}</strong></li>
+        <li><strong>Description: </strong>${item.description}</li>
+        <li><strong>Director: </strong>${item.director}</li>
+        <li><strong>Producer: </strong>${item.producer}</li>
+        <li><strong>Release date: </strong>${item.release_date}</li>
+        <li><strong>Score: </strong>${item.rt_score}</li>
+      </ul>
+      <button class="close">Sair</button>
+    </div>
   `
 }
 
 function infoCard(movies) {
-  const show = document.querySelector('.backInfos');
+  const show = document.querySelector('.infos');
   show.innerHTML = showFilms(movies);
 
   const button = document.querySelectorAll('.btn');

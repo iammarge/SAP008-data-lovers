@@ -50,17 +50,3 @@ export const filterSelect = (films, key, value) => {
   })
 }
 
-/* FILTRO GÊNERO
-export const filterGender = (films, key,  gender) => {
-  return films.filter ((chars) => {
-    return chars[key] === gender
-  })
-}
-*/
-
-/*CALCULO PERSONAGENS
-export const aggregateCal = (chars) => {
-  const totalCharacters = chars.reduce((a, b) => (a + b))
-  return {"total": totalCharacters};
-}
-*/

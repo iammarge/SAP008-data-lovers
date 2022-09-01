@@ -1,4 +1,4 @@
-import { orderByKey, searchByKey, filterSelect} from './data.js';
+import { orderByKey, searchByKey, filterSelect } from './data.js';
 import data from './data/ghibli/ghibli.js';
 let movies = data.films
 let characters = movies.reduce(function (chars, film) {
