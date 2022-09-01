@@ -59,15 +59,15 @@ describe ('orderByScore', function () {
       movies[2]
     ])
   })
-   /* it('deve ordenar em ordem de notas de avaliação decrescente', function(){
-      const order = orderByScore (movies, descending)
+    it('deve ordenar em ordem de notas de avaliação decrescente', function(){
+      const order = orderByScore (movies, 'descending')
       expect(order.length).toEqual(movies.length)
       expect(order).toEqual([
         movies[2],
         movies[1],
         movies[0]
       ])
-    }) */
+    })
 })
 
 describe ('searchByKey', function () {
