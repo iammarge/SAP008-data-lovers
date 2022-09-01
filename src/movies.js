@@ -1,4 +1,4 @@
-import { orderByKey, searchByKey, filterSelect } from './data.js';
+import { orderByKey, searchByKey, filterSelect, orderByScore } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 // Lógica mostrar filmes
@@ -34,7 +34,7 @@ function printInfos(item) {
          </ul>
          <button class="close">Sair</button>
         </div>
-        
+
 showFilms(movies);
   `
 }
@@ -102,7 +102,8 @@ const selectElementScore = document.querySelector('.score');
 
 selectElementScore.addEventListener('change', (event) => {
   const value = event.target.value
-  const orderedList = orderByKey(movies, 'rt_score', value)
+  const orderedList = orderByScore(movies, value)
+  console.log(orderedList)
   infoCard(orderedList)
 });
 

@@ -24,6 +24,18 @@ export const orderByKey = (data, key, order) => {
   })}
 }
 
+// SORT BY SCORE //
+export const orderByScore = (data, order) => {
+  const ascending = data.sort((a, b) => a.rt_score - b.rt_score)
+  if (order === "ascending") {
+    return ascending
+  }
+  else {
+    return ascending.slice(0, 20).reverse()
+  }
+}
+
+
 // SEARCH//
 
 export const searchByKey = (data, key, value) => {
@@ -31,7 +43,7 @@ export const searchByKey = (data, key, value) => {
   return resultSearch;
 }
 
-// FILTRO 
+// FILTRO
 export const filterSelect = (films, key, value) => {
   return films.filter ((select) => {
     return select[key] === value
