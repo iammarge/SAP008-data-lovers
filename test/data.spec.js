@@ -3,14 +3,17 @@ import { orderByKey , orderByScore, searchByKey, filterSelect } from '../src/dat
 const movies = [
   {
     "title": "When Marnie Was There",
+    "director": "Hiromasa Yonebayashi",
     "rt_score": "92",
   },
   {
     "title": "Castle in the Sky",
+    "director": "Hayao Miyazaki",
     "rt_score": "95",
   },
   {
     "title": "The Tale of the Princess Kaguya",
+    "director": "Isao Takahata",
     "rt_score": "100",
   }
 ]
@@ -92,6 +95,16 @@ describe ('filterSelect', function (){
     expect(filter.length).toEqual(1)
     expect(filter).toEqual([
       characters[1],
+    ])
+  })
+})
+
+describe ('filterSelect', function (){
+  it ('deve filtrar por diretor', function (){
+    const filter = filterSelect (movies, 'director', "Hayao Miyazaki" )
+    expect(filter.length).toEqual(1)
+    expect(filter).toEqual([
+      movies[1]
     ])
   })
 })

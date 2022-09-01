@@ -25,14 +25,14 @@ function printInfos(item) {
   return `
    <div class="infoCards">
       <ul class="cardInfos" style="list-style: none;">
-        <li><strong>${item.title}</strong></li>
+        <li class=><strong>${item.title}</strong></li>
         <li><strong>Description: </strong>${item.description}</li>
         <li><strong>Director: </strong>${item.director}</li>
         <li><strong>Producer: </strong>${item.producer}</li>
         <li><strong>Release date: </strong>${item.release_date}</li>
         <li><strong>Score: </strong>${item.rt_score}</li>
       </ul>
-      <button class="close">Sair</button>
+      <button class="close">Fechar</button>
     </div>
   `
 }
