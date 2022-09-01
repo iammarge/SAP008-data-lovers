@@ -1,0 +1,36 @@
+
+header img {
+  width: 100%;
+}
+
+.navMenu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 3vw 0 0 -1.5vw;
+  padding: 0 2vw;
+  column-gap: 1vw;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.about {
+  margin: 5vw 0 0 2vw;
+  width: 52%;
+  font-size: 2rem;
+}
+
+footer {
+  width: 100%;
+}
+
+.foot img {
+  position: absolute;
+}
+
+ul{
+text-align: center;
+}
+
+.foot p {
+  text-align: end;
+}

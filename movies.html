@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmes</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <header>
+        <div class="imgMenu"><img
+                src="./img/Figura-5-O-Logotipo-do-Estudio-Ghibli-A-Imagem-do-Personagem-Totoro-Tornou-se-Marca.png"
+                alt="logo studio ghibli"></div>
+    </header>
+
+    <nav>
+        <ul class="navMenu" style="list-style: none;">
+            <li><a href="./index.html" style="text-decoration:none">Início</a></li>
+            <li><a href="./movies.html" style="text-decoration:none">Filmes</a></li>
+            <li><a href="./characters.html" style="text-decoration:none">Personagens</a></li>
+        </ul>
+
+            <select class="titleFilms">
+                <option value="orderTitle" selected disabled>Ordem Alfabética</option>
+                <option class="orderAz" value="ascending">Ordenar A - Z</option>
+                <option class="orderZa" value="descending">Ordenar Z - A</option>
+            </select>
+
+            <select class="releaseDate">
+                <option value="orderDate" selected disabled>Data de lançamento</option>
+                <option class="release_date" value="ascending">Mais antigos</option>
+                <option class="release_date" value="descending">Mais recentes</option>
+            </select>
+
+            <select class="directors">
+                <option value="" selected disabled>Direção</option>
+                <option class="selectDirector" value="Hayao Miyazaki">Hayao Miyazaki</option>
+                <option class="selectDirector" value="Isao Takahata">Isao Takahata</option>
+                <option class="selectDirector" value="Yoshifumi Kondō">Yoshifumi Kondō</option>
+                <option class="selectDirector" value="Hiroyuki Morita">Hiroyuki Morita</option>
+                <option class="selectDirector" value="Gorō Miyazaki">Gorō Miyazaki</option>
+                <option class="selectDirector" value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
+            </select>
+
+            <select class="score">
+                <option value="orderScore" selected disabled>Nota de avaliação</option>
+                <option class="rt_score" value="ascending">Menor nota - Maior nota</option>
+                <option class="rt_score" value="descending">Maior nota - Menor nota</option>
+            </select>
+
+            <div id="divBusca">
+                <input type="text" id="txtSearch" placeholder="Buscar... 🔎" />
+            </div>
+        
+    </nav>
+
+
+    <main>
+        <div id="cards"></div>
+        <div class="backInfos"></div>
+    </main>
+
+    <footer>
+        <div class="foot">
+        <img src="./img/lab-logo.png" alt="Logo Laboratória">
+        <ul style="list-style: none;">
+          <li>
+            Desenvolvido por
+            <a href="https://github.com/iammarge" target="_blank"> Marjorie Santos</a>
+            &
+            <a href="https://github.com/asmih" target="_blank">Michelle Santana</a>
+          </li>
+        </ul>
+        <p>SAP008</p>
+      </div>
+       </footer>
+
+     <script src="movies.js" type="module"></script>
+</body>
+
+</html>
