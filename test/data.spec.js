@@ -59,15 +59,15 @@ describe ('orderByScore', function () {
       movies[2]
     ])
   })
-   /* it('deve ordenar em ordem de notas de avaliação decrescente', function(){
-      const order = orderByScore (movies, descending)
+    it('deve ordenar em ordem de notas de avaliação decrescente', function(){
+      const order = orderByScore (movies, 'descending')
       expect(order.length).toEqual(movies.length)
       expect(order).toEqual([
         movies[2],
         movies[1],
         movies[0]
       ])
-    }) */
+    })
 })
 
 describe ('searchByKey', function () {
@@ -85,6 +85,13 @@ describe ('filterSelect', function (){
     expect(filter).toEqual([
       characters[0],
       characters[2],
+    ])
+  })
+  it ('deve filtrar por genero masculino', function (){
+    const filter = filterSelect (characters, 'gender', 'Male')
+    expect(filter.length).toEqual(1)
+    expect(filter).toEqual([
+      characters[1],
     ])
   })
 })
