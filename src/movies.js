@@ -4,7 +4,7 @@ import data from './data/ghibli/ghibli.js';
 // Lógica mostrar filmes
 
 let movies = data.films;
-const info = document.querySelector('#cards');
+const info = document.querySelector('#card');
 
 function showFilms(data) {
   const films = data.map((item) => {
@@ -34,13 +34,11 @@ function printInfos(item) {
          </ul>
          <button class="close">Sair</button>
         </div>
-
-showFilms(movies);
   `
 }
 
 function infoCard(movies) {
-  const show = document.querySelector('.backInfos');
+  const show = document.querySelector('.infos');
   show.innerHTML = showFilms(movies);
 
   const button = document.querySelectorAll('.btn');

@@ -87,4 +87,11 @@ describe ('filterSelect', function (){
       characters[2],
     ])
   })
+  it ('deve filtrar por genero masculino', function (){
+    const filter = filterSelect (characters, 'gender', 'Male')
+    expect(filter.length).toEqual(1)
+    expect(filter).toEqual([
+      characters[1],
+    ])
+  })
 })
