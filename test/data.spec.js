@@ -1,23 +1,34 @@
-import { example, anotherExample } from '../src/data.js';
+import { orderByKey } from '../src/data.js';
 
+const movies = [
+  {
+    "title": "When Marnie Was There",
+  },
+  {
+    "title": "Castle in the Sky",
+  },
+  {
+    "title": "The Tale of the Princess Kaguya",
+  },
+]
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
-  });
-
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
-});
-
-
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
-
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});
+describe ('orderByKey', function () {
+  it('deve ordenar em ordem alfabética', function(){
+    const order = orderByKey (movies,'title', 'ascending')
+    expect(order.length).toEqual(movies.length)
+    expect(order).toEqual([
+      movies[1],
+      movies[2],
+      movies[0]
+    ])
+  })
+  it('deve ordenar em ordem alfabética inversa', function(){
+    const order = orderByKey (movies,'title', 'descending')
+    expect(order.length).toEqual(movies.length)
+    expect(order).toEqual([
+      movies[0],
+      movies[2],
+      movies[1]
+    ])
+  })
+})

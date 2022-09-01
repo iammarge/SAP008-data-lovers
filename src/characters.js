@@ -1,4 +1,4 @@
-import { orderByKey, searchByKey, filterGender } from './data.js';
+import { orderByKey, searchByKey, filterSelect} from './data.js';
 import data from './data/ghibli/ghibli.js';
 let movies = data.films
 let characters = movies.reduce(function (chars, film) {
@@ -50,11 +50,10 @@ function filtroPesquisa(event) {
 }
 searchNames.addEventListener("keyup", filtroPesquisa);
 
-/* ORDENAÇÃO GÊNERO
+// ORDENAÇÃO GÊNERO
 const selectGender = document.querySelector('.selectGender');
 selectGender.addEventListener('change', (event) => {
   const value = event.target.value
-  const genderFilter = filterGender(characters, 'gender', value)
+  const genderFilter = filterSelect(characters, 'gender', value)
   showCharacters(genderFilter)
 });
-*/
