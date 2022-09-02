@@ -9,7 +9,6 @@ export const orderByKey = (data, key, order) => {
     if (a[key] < b[key]) {
       return -1;
     }
-    return 0;
   })}
 
   if (order === "descending") {
@@ -20,21 +19,20 @@ export const orderByKey = (data, key, order) => {
     if (a[key] > b[key]) {
       return -1;
     }
-    return 0;
   })}
 }
 
 // SORT BY SCORE //
 export const orderByScore = (data, order) => {
-  const ascending = data.sort((a, b) => a.rt_score - b.rt_score)
+  const copy = [...data]
+  const ascending = copy.sort((a, b) => a.rt_score - b.rt_score)
   if (order === "ascending") {
     return ascending
   }
   else {
-    return ascending.slice(0, 20).reverse()
+    return ascending.reverse()
   }
 }
-
 
 // SEARCH//
 

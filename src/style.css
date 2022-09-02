@@ -6,16 +6,17 @@ header img {
 .navMenu {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin: 3vw 0 0 -1.5vw;
-  padding: 0 2vw;
-  column-gap: 1vw;
-  font-size: 1.2rem;
-  font-weight: 600;
+  align-self: center;
+}
+
+.filters{
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
 #divBusca {
-  background-color:#8ba0a0f3;
-  width:300px;
+  width:100px;
 }
 
 #txtBusca {
@@ -36,19 +37,22 @@ header img {
   row-gap: 1vw;
   justify-content: center;
   margin: 3vw 0 2vw;
+  padding: 0;
 }  
 
 .poster {
   background-color: #B0E0E6 ;
-  padding: 1vw;
+  padding: 15px;
   border-radius: 0.3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .btn {
   background: none;
   border: none;
-  width: 12vw;
-  height: 18vw;
   cursor: pointer;
 }
 
@@ -89,38 +93,35 @@ header img {
 #cards {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: auto;
   column-gap: 1vw;
   row-gap: 1vw;
   justify-content: center;
   margin: 3vw 0 2vw;
+  padding: 0;
 }
 
 .cardStructure{
   background-color: #B0E0E6;
-  border-radius: 0.5vw;
-  margin: 7% 20%;
   padding: 2vw 4vw 2.5vw;
-  min-width: 60%;
-  min-height: 45%;
   color: black;
   font-size: 1.25rem;
-  font-weight: 400;
   text-align: center;
 }
 
-footer {
-  width: 100%;
+.posterCharacters{
+  justify-content: center;
 }
 
-.foot img {
-  position: absolute;
+.cardInfo{
+
 }
 
-ul{
-text-align: center;
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.foot p {
-  text-align: end;
+.footer img {
+width: 100px;
 }

@@ -24,6 +24,7 @@
             <li><a href="./characters.html" style="text-decoration:none">Personagens</a></li>
         </ul>
 
+        <div class = "filters">
             <select class="titleFilms">
                 <option value="orderTitle" selected disabled>Ordem Alfabética</option>
                 <option class="orderAz" value="ascending">Ordenar A - Z</option>
@@ -55,29 +56,25 @@
             <div id="divBusca">
                 <input type="text" id="txtSearch" placeholder="Buscar... 🔎" />
             </div>
+        </div>
 
     </nav>
 
 
     <main>
         <div id="card"></div>
-        <div class="infos"></div>
+        <ul class="infos"></ul>
     </main>
 
-    <footer>
-        <div class="foot">
+    <footer class="footer">
         <img src="./img/lab-logo.png" alt="Logo Laboratória">
-        <ul style="list-style: none;">
-          <li>
-            Desenvolvido por
+        <p> Desenvolvido por
             <a href="https://github.com/iammarge" target="_blank"> Marjorie Santos</a>
             &
             <a href="https://github.com/asmih" target="_blank">Michelle Santana</a>
-          </li>
-        </ul>
-        <p>SAP008</p>
-      </div>
-       </footer>
+            SAP008
+        </p>
+    </footer>
 
      <script src="movies.js" type="module"></script>
 </body>
