@@ -9,12 +9,12 @@ const info = document.querySelector('#card');
 function showFilms(data) {
   const films = data.map((item) => {
     const structure = `
-       <div class="poster">
-       <p class="titleOfFilm"><strong>${item.title}</strong></p>
+      <li class="poster">
+        <strong class="titleOfFilm">${item.title}</strong>
          <button class= "btn" type="button">
-         <img src="${item.poster}"class="posterCard">
+          <img src="${item.poster}"class="posterCard">
         </button>
-   </div>
+      </li>
       `;
     return structure;
   });
@@ -23,17 +23,17 @@ function showFilms(data) {
 
 function printInfos(item) {
   return `
-  <div class="infoCards">
-         <ul class="cardInfos" style="list-style: none;">
-           <li><strong>${item.title}</strong></li>
-           <li><strong>Description: </strong>${item.description}</li>
-           <li><strong>Director: </strong>${item.director}</li>
-           <li><strong>Producer: </strong>${item.producer}</li>
-           <li><strong>Release date: </strong>${item.release_date}</li>
-           <li><strong>Score: </strong>${item.rt_score}</li>
-         </ul>
-         <button class="close">Sair</button>
-        </div>
+   <div class="infoCards">
+      <ul class="cardInfo" style="list-style: none;">
+        <li><strong>${item.title}</strong></li>
+        <li><strong>Description: </strong>${item.description}</li>
+        <li><strong>Director: </strong>${item.director}</li>
+        <li><strong>Producer: </strong>${item.producer}</li>
+        <li><strong>Release date: </strong>${item.release_date}</li>
+        <li><strong>Score: </strong>${item.rt_score}</li>
+      </ul>
+      <button class="close">Fechar</button>
+    </div>
   `
 }
 
