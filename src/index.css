@@ -11,13 +11,6 @@ body{
   background-color: aqua;
 }
 
-navbar {
-  width: 100%;
-  background-color:white;
-  display: flex;
-  justify-content: center;
-  margin: 0;
-}
 .navMenu {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -45,7 +38,6 @@ main{
   width: 52%;
   font-size: 2rem;
 }
-
 
 .footer {
   display: flex;
