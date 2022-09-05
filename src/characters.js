@@ -62,7 +62,7 @@ selectGender.addEventListener('change', (event) => {
   }
   const genderFilter = filterSelect(characters, 'gender', value)
   const percentage = computeStats(characters.length, genderFilter.length)
-  const message = ` ${genderFilter.length} personagens são do gênero ${value} , que representam ${percentage}% do total de personagens `
+  const message = ` ${genderFilter.length} personagens são do gênero ${value} , que representam ${percentage}% do total de personagens do Studio Ghibli `
   divMessage.innerHTML= message
   showCharacters(genderFilter)
 });

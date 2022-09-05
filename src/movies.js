@@ -137,7 +137,7 @@ selectDirector.addEventListener('change', (event) => {
   }
   const directorFilter = filterSelect(movies, 'director', directorName)
   const percentage = computeStats(movies.length, directorFilter.length)
-  const message = `${directorName} dirigiu ${directorFilter.length} filmes, que representam ${percentage}% do total de filmes `
+  const message = `${directorName} dirigiu ${directorFilter.length} filmes, que representam ${percentage}% do total de filmes do Studio Ghibli `
   divMessage.innerHTML= message
   infoCard(directorFilter)
 });

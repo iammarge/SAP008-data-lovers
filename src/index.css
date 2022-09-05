@@ -4,8 +4,16 @@ body {
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
+  margin: 0;
 }
 
+navbar {
+  width: 100%;
+  background-color:white;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
 .navMenu {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -14,7 +22,7 @@ body {
   column-gap: 1vw;
   font-size: 1.2rem;
   font-weight: 600;
-  color: rgb(4, 103, 178);
+  color: rgb(254, 254, 254);
   list-style: none;
 }
 
