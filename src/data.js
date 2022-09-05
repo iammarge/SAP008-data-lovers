@@ -48,3 +48,9 @@ export const filterSelect = (films, key, value) => {
   })
 }
 
+// CALCULO AGREGADO //
+export function computeStats(dadosFiltrados, todosDados) {
+  return {
+    percentual: ((dadosFiltrados.length / todosDados.length) * 100).toFixed(2),
+  };
+}
