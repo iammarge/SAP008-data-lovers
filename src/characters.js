@@ -1,6 +1,7 @@
-import { orderByKey, searchByKey, filterSelect } from './data.js';
+import { orderByKey, searchByKey, filterSelect, computeStats } from './data.js';
 import data from './data/ghibli/ghibli.js';
 let movies = data.films
+const divMessage = document.querySelector('.message');
 let characters = movies.reduce(function (chars, film) {
   const people = film.people.map(function (char) {
     char.title = film.title
@@ -54,6 +55,14 @@ searchNames.addEventListener("keyup", filtroPesquisa);
 const selectGender = document.querySelector('.selectGender');
 selectGender.addEventListener('change', (event) => {
   const value = event.target.value
+  if (value === "gender") {
+    showCharacters(characters) 
+    divMessage.innerHTML = ""
+    return
+  }
   const genderFilter = filterSelect(characters, 'gender', value)
+  const percentage = computeStats(characters.length, genderFilter.length)
+  const message = ` ${genderFilter.length} personagens são do gênero ${value} , que representam ${percentage}% do total de personagens `
+  divMessage.innerHTML= message
   showCharacters(genderFilter)
 });

@@ -1,10 +1,11 @@
-import { orderByKey, searchByKey, filterSelect, orderByScore } from './data.js';
+import { orderByKey, searchByKey, filterSelect, orderByScore, computeStats } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 // Lógica mostrar filmes
 
 let movies = data.films;
 const info = document.querySelector('#card');
+const divMessage = document.querySelector('.message');
 
 function showFilms(data) {
   const films = data.map((item) => {
@@ -80,6 +81,10 @@ const selectElement = document.querySelector('.titleFilms');
 
 selectElement.addEventListener('change', (event) => {
   const value = event.target.value
+  if (value === "orderTitle") {
+    infoCard(movies) 
+    return
+  }
   const orderedList = orderByKey(movies, 'title', value)
   infoCard(orderedList)
 });
@@ -90,6 +95,10 @@ const selectElementDate = document.querySelector('.releaseDate');
 
 selectElementDate.addEventListener('change', (event) => {
   const value = event.target.value
+  if (value === "orderDate") {
+    infoCard(movies) 
+    return
+  }
   const orderedList = orderByKey(movies, 'release_date', value)
   infoCard(orderedList)
 });
@@ -100,6 +109,10 @@ const selectElementScore = document.querySelector('.score');
 
 selectElementScore.addEventListener('change', (event) => {
   const value = event.target.value
+  if (value === "orderScore") {
+    infoCard(movies) 
+    return
+  }
   const orderedList = orderByScore(movies, value)
   infoCard(orderedList)
 });
@@ -116,8 +129,17 @@ searchTitles.addEventListener("keyup", filtroPesquisa);
 
 const selectDirector = document.querySelector('.directors');
 selectDirector.addEventListener('change', (event) => {
-  const value = event.target.value
-  const directorFilter = filterSelect(movies, 'director', value)
+  const directorName = event.target.value
+  if (directorName === "") {
+    infoCard(movies) 
+    divMessage.innerHTML = ""
+    return
+  }
+  const directorFilter = filterSelect(movies, 'director', directorName)
+  const percentage = computeStats(movies.length, directorFilter.length)
+  const message = `${directorName} dirigiu ${directorFilter.length} filmes, que representam ${percentage}% do total de filmes `
+  divMessage.innerHTML= message
   infoCard(directorFilter)
 });
+
 

@@ -1,6 +1,6 @@
 body {
   font-family: 'Ubuntu Mono', monospace;
-  background-image: url(./img/Figura-5-O-Logotipo-do-Estudio-Ghibli-A-Imagem-do-Personagem-Totoro-Tornou-se-Marca.png);
+  background-image: url('./img/Figura-5-O-Logotipo-do-Estudio-Ghibli-A-Imagem-do-Personagem-Totoro-Tornou-se-Marca.png');
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
