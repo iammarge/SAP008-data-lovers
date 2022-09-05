@@ -52,3 +52,4 @@ export const filterSelect = (films, key, value) => {
 export function computeStats(total, parcial) {
   return ((parcial / total) * 100).toFixed(2);
 };
+

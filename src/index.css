@@ -1,10 +1,14 @@
-body {
+*{
   font-family: 'Ubuntu Mono', monospace;
-  background-image: url('./img/Figura-5-O-Logotipo-do-Estudio-Ghibli-A-Imagem-do-Personagem-Totoro-Tornou-se-Marca.png');
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  background-size: cover;
   margin: 0;
+  padding: 0;
+}
+
+body{
+  background-image: url('img/pngwing.com.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: aqua;
 }
 
 navbar {
@@ -17,34 +21,40 @@ navbar {
 .navMenu {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin: 3vw 0 0 -1.5vw;
-  padding: 0 2vw;
   column-gap: 1vw;
   font-size: 1.2rem;
   font-weight: 600;
-  color: rgb(254, 254, 254);
-  list-style: none;
+  color: rgb(4, 103, 178);
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+
+main{
+  margin: 12px;
 }
 
 .about {
-  margin: 5vw 0 0 2vw;
+  margin: 50px;
+  width: 52%;
+  font-size: 2rem;
+}
+
+.founders{
+  margin: 50px;
   width: 52%;
   font-size: 2rem;
 }
 
 
-footer {
-  width: 100%;
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  background-color: white;
 }
 
-.foot img {
-  position: absolute;
-}
-
-ul{
-text-align: center;
-}
-
-.foot p {
-  text-align: end;
+.footer img {
+width: 200px;
 }
