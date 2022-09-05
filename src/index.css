@@ -13,20 +13,6 @@ header {
   justify-content: space-around;
 }
 
-header img {
-  height: 6rem;
-}
-
-nav ul {
-  display:flex;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-
-nav ul li a {
-padding: 50px 15px;
-}
-
 .navMenu {
   width: 8rem;
   display: flex;
@@ -43,7 +29,6 @@ body{
   padding:0%;
   margin: 0%;
 }
-
 
 main{
   margin: 12px;
