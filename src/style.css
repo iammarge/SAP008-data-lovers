@@ -4,19 +4,36 @@
   padding: 0;
 }
 
-header img {
+header {
+  display:flex;
+  background-color: white;
   width: 100%;
-  height: 20rem;
+  height: 6rem;
+  align-items: center;
+  justify-content: space-around;
+}
+
+header img {
+  height: 6rem;
+}
+
+nav ul {
+  display:flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+nav ul li a {
+padding: 50px 15px;
 }
 
 .navMenu {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 1vw;
+  width: 8rem;
+  display: flex;
   font-size: 1.2rem;
   font-weight: 600;
-  color: rgb(4, 103, 178);
-}
+  justify-content: space-between;
+} 
 
 .filters{
 display: flex;

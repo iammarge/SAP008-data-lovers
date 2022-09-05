@@ -4,48 +4,70 @@
   padding: 0;
 }
 
-body{
-  background-image: url('img/pngwing.com.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: aqua;
+header {
+  display:flex;
+  background-color: white;
+  width: 100%;
+  height: 6rem;
+  align-items: center;
+  justify-content: space-around;
 }
 
-navbar {
-  width: 100%;
-  background-color:white;
-  display: flex;
-  justify-content: center;
-  margin: 0;
+header img {
+  height: 6rem;
 }
+
+nav ul {
+  display:flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+nav ul li a {
+padding: 50px 15px;
+}
+
 .navMenu {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 1vw;
+  width: 8rem;
+  display: flex;
   font-size: 1.2rem;
   font-weight: 600;
-  color: rgb(4, 103, 178);
-  justify-content: center;
-  align-items: center;
-  margin: 50px;
+  justify-content: space-between;
+} 
+
+body{
+  background-image: url('./img/totoro-bus-stop.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
+  padding:0%;
+  margin: 0%;
 }
+
 
 main{
   margin: 12px;
+  
 }
 
 .about {
   margin: 50px;
   width: 52%;
   font-size: 2rem;
+  color: white;
 }
 
 .founders{
   margin: 50px;
   width: 52%;
   font-size: 2rem;
+  color: white;
 }
 
+a {
+  text-decoration: none;
+  color: rgb(24, 118, 40);
+}
 
 .footer {
   display: flex;
@@ -58,3 +80,4 @@ main{
 .footer img {
 width: 200px;
 }
+
