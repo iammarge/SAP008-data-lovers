@@ -2,19 +2,21 @@
   font-family: 'Ubuntu Mono', monospace;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 header {
   display:flex;
+  flex-direction: column;
   background-color: white;
   width: 100%;
-  height: 6rem;
   align-items: center;
   justify-content: space-around;
 }
 
 header img {
   height: 6rem;
+  max-width: 100%;
 }
 
 nav ul {
@@ -28,7 +30,6 @@ padding: 50px 15px;
 }
 
 .navMenu {
-  width: 8rem;
   display: flex;
   font-size: 1.2rem;
   font-weight: 600;
@@ -63,7 +64,7 @@ gap: 50px;
   row-gap: 1vw;
   justify-content: center;
   margin: 3vw 0 2vw;
-  padding: 0;
+  padding: 20px;
 }  
 
 .poster {
@@ -119,32 +120,54 @@ gap: 50px;
 #cards {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  column-gap: 1vw;
-  row-gap: 1vw;
+  column-gap: 15px;
+  row-gap: 15px;
   justify-content: center;
-  margin: 3vw 0 2vw;
-  padding: 0;
+  margin: 30px 0;
+  padding: 20px;
 }
 
 .cardStructure{
   background-color: #B0E0E6;
-  padding: 0;
+  padding: 15px;
   border-radius: 0.3vw;
   color: black;
   font-size: 1.25rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
+}
+
+.posterCharacters{
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+}
+.charactersName{
+  font-size: 18px;
+}
+
+.cardInfos{
+  list-style: none;
+  font-size: 16px;
 }
 
 .footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: 17px;
+  background-color: white;
+  margin-top: 41px;
 }
 
 .footer img {
 width: 200px;
+}
+
+@media (max-width:900px){
+  #cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

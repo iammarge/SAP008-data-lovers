@@ -50,6 +50,6 @@ export const filterSelect = (films, key, value) => {
 
 // CALCULO AGREGADO //
 export function computeStats(total, parcial) {
-  return ((parcial / total) * 100).toFixed(2);
-};
+  return ((parcial / total) * 100).toFixed(2)
+}
 

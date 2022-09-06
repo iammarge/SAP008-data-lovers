@@ -6,15 +6,29 @@
 
 header {
   display:flex;
+  flex-direction: column;
   background-color: white;
   width: 100%;
-  height: 6rem;
   align-items: center;
   justify-content: space-around;
 }
 
+header img {
+  height: 6rem;
+  max-width: 100%;
+}
+
+nav ul {
+  display:flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+nav ul li a {
+padding: 50px 15px;
+}
+
 .navMenu {
-  width: 8rem;
   display: flex;
   font-size: 1.2rem;
   font-weight: 600;
@@ -24,28 +38,26 @@ header {
 body{
   background-image: url('./img/totoro-bus-stop.png');
   background-repeat: no-repeat;
-  background-position: center;
+  background-position-y: 80%;
   background-color: black;
-  padding:0%;
+  background-size: contain;
+  padding: 0%;
   margin: 0%;
 }
 
 main{
   margin: 12px;
-  
 }
 
 .about {
-  margin: 50px;
-  width: 52%;
-  font-size: 2rem;
+  padding: 22px;
+  font-size: 1rem;
   color: white;
 }
 
 .founders{
-  margin: 50px;
-  width: 52%;
-  font-size: 2rem;
+  padding: 22px ;
+  font-size: 1rem;
   color: white;
 }
 
@@ -62,8 +74,9 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: 17px;
   background-color: white;
+  margin-top: 41px;
 }
 
 .footer img {

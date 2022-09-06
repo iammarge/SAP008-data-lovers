@@ -18,7 +18,7 @@ function showCharacters(data) {
   <div class="cardStructure">
           <p class="charactersName"><strong>${item.name}</strong></p>
           <img src="${item.img}"class="posterCharacters">
-         <ul class="cardInfos" style="list-style: none;">
+         <ul class="cardInfos">
            <li><strong>Gender: </strong>${item.gender}</li>
            <li><strong>Age: </strong>${item.age}</li>
            <li><strong>Eye color: </strong>${item.eye_color}</li>
