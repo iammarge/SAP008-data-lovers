@@ -16,7 +16,7 @@ function showCharacters(data) {
   const charactersInfo = data.map((item) => {
     return `
   <div class="cardStructure">
-          <p class="charactersName"><strong>${item.name}</strong></p>
+          <p class="characterName"><strong>${item.name}</strong></p>
           <img src="${item.img}"class="posterCharacters">
          <ul class="cardInfos">
            <li><strong>Gender: </strong>${item.gender}</li>
@@ -39,6 +39,10 @@ const selectElement = document.querySelector('.charactersName');
 
 selectElement.addEventListener('change', (event) => {
   const value = event.target.value
+  if (value === "orderName") {
+    showCharacters(characters) 
+    return
+  }
   const orderedList = orderByKey(characters, 'name', value)
   showCharacters(orderedList)
 });
