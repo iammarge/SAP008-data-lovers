@@ -1,4 +1,5 @@
 # Ghibli Lovers
+<br>
 Neste 2º projeto da turma 008 da Laboratória, trabalhamos com manipulações de dados.
 Recebemos os dados da laboratoria com algumas temáticas e escolhemos o Studio Ghibli para nossa página.
 
