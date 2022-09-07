@@ -1,4 +1,4 @@
-*{
+* {
   font-family: 'Ubuntu Mono', monospace;
   margin: 0;
   padding: 0;
@@ -26,7 +26,7 @@ nav ul {
 }
 
 nav ul li a {
-padding: 50px 15px;
+  padding: 50px 15px;
 }
 
 .navMenu {
@@ -36,22 +36,19 @@ padding: 50px 15px;
   justify-content: space-between;
 } 
 
-main{
-
-}
-
 .filters{
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  flex-direction: column;
 }
 
 #divBusca {
   width:100px;
 }
 
-#txtBusca {
+#txtSearch {
   background-color:transparent;
   padding-left:5px;
   font-style:italic;
@@ -63,7 +60,6 @@ gap: 50px;
 
 .infos {
   display: grid;
-  grid-template-columns: repeat(1fr);
   column-gap: 15px;
   row-gap: 15px;
   justify-content: center;
@@ -111,8 +107,8 @@ gap: 50px;
 
 .cardInfo{
   display: grid;
-    grid-auto-columns: auto;
-    position: sticky;
+  grid-auto-columns: auto;
+  position: sticky;
 }
 
 .close{
@@ -129,7 +125,6 @@ gap: 50px;
 
 #cards {
   display: grid;
-  grid-template-columns: repeat(1fr);
   column-gap: 15px;
   row-gap: 15px;
   justify-content: center;
