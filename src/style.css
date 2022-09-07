@@ -36,6 +36,10 @@ padding: 50px 15px;
   justify-content: space-between;
 } 
 
+main{
+
+}
+
 .filters{
 display: flex;
 align-items: center;
@@ -59,18 +63,18 @@ gap: 50px;
 
 .infos {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  column-gap: 1vw;
-  row-gap: 1vw;
+  grid-template-columns: repeat(1fr);
+  column-gap: 15px;
+  row-gap: 15px;
   justify-content: center;
-  margin: 3vw 0 2vw;
+  margin: 30px 0;
   padding: 20px;
 }  
 
 .poster {
   background-color: #B0E0E6 ;
   padding: 15px;
-  border-radius: 0.3vw;
+  border-radius: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -94,7 +98,7 @@ gap: 50px;
 
 .infoCards{
   background-color: #B0E0E6;
-  border-radius: 0.5vw;
+  border-radius: 1rem;
   margin: 7% 20%;
   padding: 2vw 4vw 2.5vw;
   min-width: 60%;
@@ -103,6 +107,12 @@ gap: 50px;
   font-size: 1.25rem;
   font-weight: 400;
   text-align: center;
+}
+
+.cardInfo{
+  display: grid;
+    grid-auto-columns: auto;
+    position: sticky;
 }
 
 .close{
@@ -119,7 +129,7 @@ gap: 50px;
 
 #cards {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(1fr);
   column-gap: 15px;
   row-gap: 15px;
   justify-content: center;
@@ -130,7 +140,7 @@ gap: 50px;
 .cardStructure{
   background-color: #B0E0E6;
   padding: 15px;
-  border-radius: 0.3vw;
+  border-radius: 1rem;
   color: black;
   font-size: 1.25rem;
   display: flex;
@@ -144,7 +154,7 @@ gap: 50px;
   height: 200px;
   object-fit: cover;
 }
-.charactersName{
+.characterName{
   font-size: 18px;
 }
 
@@ -166,8 +176,13 @@ gap: 50px;
 width: 200px;
 }
 
-@media (max-width:900px){
+@media (min-width:900px){
   #cards {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .infos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
 }
