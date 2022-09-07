@@ -34,7 +34,18 @@ nav ul li a {
   font-size: 1.2rem;
   font-weight: 600;
   justify-content: space-between;
+  padding-bottom: 2rem;
 } 
+
+a {
+  text-decoration: none;
+  color: rgb(24, 118, 40);
+}
+
+main {
+  background-color: black;
+  position: relative;
+}
 
 .filters{
   display: flex;
@@ -44,8 +55,17 @@ nav ul li a {
   flex-direction: column;
 }
 
+#filter {
+  border-radius: 2rem;
+  background-color: rgb(24, 118, 40);
+  border: solid white 2px;
+  padding: 2px;
+  margin-top: 2rem;
+}
+
 #divBusca {
   width:100px;
+  margin-top: 2rem;
 }
 
 #txtSearch {
@@ -56,6 +76,13 @@ nav ul li a {
   border:none;
   height:32px;
   width:260px;
+}
+
+.message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
 }
 
 .infos {
@@ -84,7 +111,7 @@ nav ul li a {
 }
 
 #card{
-  position: fixed;
+  position: absolute;
   display: none;
   left: 0;
   top: 0;

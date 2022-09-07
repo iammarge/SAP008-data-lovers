@@ -39,6 +39,10 @@ const selectElement = document.querySelector('.charactersName');
 
 selectElement.addEventListener('change', (event) => {
   const value = event.target.value
+  if (value === "orderName") {
+    showCharacters(characters) 
+    return
+  }
   const orderedList = orderByKey(characters, 'name', value)
   showCharacters(orderedList)
 });

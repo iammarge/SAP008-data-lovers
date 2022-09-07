@@ -24,14 +24,14 @@
         </nav>
     </header>
     <main>     
-            <div class="filters">
-            <select class="charactersName">
-                <option value="orderName" selected disabled>Ordem Alfabética</option>
+          <div class="filters">
+            <select class="charactersName" id="filter">
+                <option value="orderName" selected>Ordem Alfabética</option>
                 <option class="name" value="ascending">Ordenar A - Z</option>
                 <option class="name" value="descending">Ordenar Z - A</option>
             </select>
 
-            <select class="selectGender">
+            <select class="selectGender" id="filter">
                 <option value="gender" selected>Gênero</option>
                 <option class="grd" value="Female">Feminino</option>
                 <option class="grd" value="Male">Masculino</option>
@@ -40,7 +40,7 @@
             <div id="divBusca">
                 <input type="text" id="txtSearch" placeholder="Buscar... 🔎" />
             </div>
-        </div>
+          </div>
         <div class="message"></div>
         <div id="cards"></div> 
     </main>

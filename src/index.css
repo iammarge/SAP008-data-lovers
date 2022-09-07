@@ -63,6 +63,7 @@ main{
 
 .founders li a {
   color: white;
+  text-decoration-line: underline;
 }
 
 a {
