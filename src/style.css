@@ -42,8 +42,11 @@ a {
   color: rgb(24, 118, 40);
 }
 
+body {
+background-color: black;
+}
+
 main {
-  background-color: black;
   position: relative;
 }
 
