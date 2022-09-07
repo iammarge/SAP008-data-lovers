@@ -21,7 +21,7 @@ Projeto feito em colaboração entre @iammarge e @as_mih.
 ## 1. Introdução
 
 ## 2. Resumo do projeto
-Esse projeto tem como objetivos de aprendizagem: manipulação de arrays, criação de testes primários, responsividade, entre outros.
+Esse projeto tem como objetivos de aprendizagem: manipulação de arrays, criação de testes unitários, responsividade, entre outros.
 
 ## 3. Histórias de usuários
 Fizemos uma pesquisa para ajudar na definição das Histórias de Usuários.
