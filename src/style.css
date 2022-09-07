@@ -1,4 +1,4 @@
-*{
+* {
   font-family: 'Ubuntu Mono', monospace;
   margin: 0;
   padding: 0;
@@ -26,7 +26,7 @@ nav ul {
 }
 
 nav ul li a {
-padding: 50px 15px;
+  padding: 50px 15px;
 }
 
 .navMenu {
@@ -51,10 +51,10 @@ main {
 }
 
 .filters{
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 #filter {
@@ -70,7 +70,7 @@ gap: 50px;
   margin-top: 2rem;
 }
 
-#txtBusca {
+#txtSearch {
   background-color:transparent;
   padding-left:5px;
   font-style:italic;
@@ -89,18 +89,17 @@ gap: 50px;
 
 .infos {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  column-gap: 1vw;
-  row-gap: 1vw;
+  column-gap: 15px;
+  row-gap: 15px;
   justify-content: center;
-  margin: 3vw 0 2vw;
+  margin: 30px 0;
   padding: 20px;
 }  
 
 .poster {
   background-color: #B0E0E6 ;
   padding: 15px;
-  border-radius: 0.3vw;
+  border-radius: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -114,17 +113,15 @@ gap: 50px;
 }
 
 #card{
-  position: absolute;
-  display: none;
-  left: 0;
-  top: 0;
+  position: sticky;
+  top: 15px;
   width: 100%;
   height: 100%;
 }
 
 .infoCards{
   background-color: #B0E0E6;
-  border-radius: 0.5vw;
+  border-radius: 1rem;
   margin: 7% 20%;
   padding: 2vw 4vw 2.5vw;
   min-width: 60%;
@@ -133,6 +130,11 @@ gap: 50px;
   font-size: 1.25rem;
   font-weight: 400;
   text-align: center;
+}
+
+.cardInfo{
+  display: grid;
+  grid-auto-columns: auto;
 }
 
 .close{
@@ -149,7 +151,6 @@ gap: 50px;
 
 #cards {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
   column-gap: 15px;
   row-gap: 15px;
   justify-content: center;
@@ -160,7 +161,7 @@ gap: 50px;
 .cardStructure{
   background-color: #B0E0E6;
   padding: 15px;
-  border-radius: 0.3vw;
+  border-radius: 1rem;
   color: black;
   font-size: 1.25rem;
   display: flex;
@@ -174,6 +175,7 @@ gap: 50px;
   height: 200px;
   object-fit: cover;
 }
+
 .characterName{
   font-size: 18px;
 }
@@ -193,11 +195,88 @@ gap: 50px;
 }
 
 .footer img {
-width: 200px;
+  width: 200px;
 }
 
-@media (max-width:900px){
-  #cards {
-    grid-template-columns: repeat(3, 1fr);
+@media (min-width:500px){
+  nav ul li a {
+    padding: 15px;
   }
+
+  a {
+    font-size: 18px;
+  }
+
+  #cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .infos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer {
+    font-size: 18px;
+  }
+}
+
+@media (min-width:900px){
+  header img {
+    height: 8rem;
+  }
+
+  nav ul li a {
+    padding: 33px;
+  }
+
+  a {
+    font-size: 25px;
+  }
+
+  #cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .infos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .footer {
+    font-size: 25px;
+  }
+
+  .footer img {
+    width: 250px;
+    }
+}
+
+@media (min-width:1440px){
+  header img {
+    height: 10rem;
+  }
+
+  nav ul li a {
+    padding: 50px;
+  }
+
+  a {
+    font-size: 35px;
+  }
+
+  #cards {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .infos {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  
+  .footer {
+    font-size: 33px;
+    margin-top: 83px;
+  }
+
+  .footer img {
+    width: 310px;
+    }
 }
