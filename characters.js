@@ -1,6 +1,7 @@
-import { orderByKey, searchByKey, filterGender } from './data.js';
+import { orderByKey, searchByKey, filterSelect, computeStats } from './data.js';
 import data from './data/ghibli/ghibli.js';
 let movies = data.films
+const divMessage = document.querySelector('.message');
 let characters = movies.reduce(function (chars, film) {
   const people = film.people.map(function (char) {
     char.title = film.title
@@ -15,9 +16,9 @@ function showCharacters(data) {
   const charactersInfo = data.map((item) => {
     return `
   <div class="cardStructure">
-          <p class="charactersName"><strong>${item.name}</strong></p>
+          <p class="characterName"><strong>${item.name}</strong></p>
           <img src="${item.img}"class="posterCharacters">
-         <ul class="cardInfos" style="list-style: none;">
+         <ul class="cardInfos">
            <li><strong>Gender: </strong>${item.gender}</li>
            <li><strong>Age: </strong>${item.age}</li>
            <li><strong>Eye color: </strong>${item.eye_color}</li>
@@ -38,6 +39,10 @@ const selectElement = document.querySelector('.charactersName');
 
 selectElement.addEventListener('change', (event) => {
   const value = event.target.value
+  if (value === "orderName") {
+    showCharacters(characters) 
+    return
+  }
   const orderedList = orderByKey(characters, 'name', value)
   showCharacters(orderedList)
 });
@@ -50,11 +55,18 @@ function filtroPesquisa(event) {
 }
 searchNames.addEventListener("keyup", filtroPesquisa);
 
-/* ORDENAÇÃO GÊNERO
+// ORDENAÇÃO GÊNERO
 const selectGender = document.querySelector('.selectGender');
 selectGender.addEventListener('change', (event) => {
   const value = event.target.value
-  const genderFilter = filterGender(characters, 'gender', value)
+  if (value === "gender") {
+    showCharacters(characters) 
+    divMessage.innerHTML = ""
+    return
+  }
+  const genderFilter = filterSelect(characters, 'gender', value)
+  const percentage = computeStats(characters.length, genderFilter.length)
+  const message = ` ${genderFilter.length} personagens são do gênero ${value} , que representam ${percentage}% do total de personagens do Studio Ghibli `
+  divMessage.innerHTML= message
   showCharacters(genderFilter)
 });
-*/

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Personagens</title>
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -12,50 +12,48 @@
 <body>
 
     <header>
-        <div class="imgMenu"><img src="./img/Figura-5-O-Logotipo-do-Estudio-Ghibli-A-Imagem-do-Personagem-Totoro-Tornou-se-Marca.png" alt="logo studio ghibli">
-        </div>
+      <div class="img">
+        <img src="./img/pngwing.com.png" alt="Logo Studio Ghibli">
+      </div>
         <nav>
             <ul class="navMenu" style="list-style: none;">
                 <li><a href="./index.html" style="text-decoration:none">Início</a></li>
                 <li><a href="./movies.html" style="text-decoration:none">Filmes</a></li>
                 <li><a href="./characters.html" style="text-decoration:none">Personagens</a></li>
             </ul>
-
-            <select class="charactersName">
-                <option value="orderName" selected disabled>Ordem Alfabética</option>
+        </nav>
+    </header>
+    <main>     
+          <div class="filters">
+            <select class="charactersName" id="filter">
+                <option value="orderName" selected>Ordem Alfabética</option>
                 <option class="name" value="ascending">Ordenar A - Z</option>
                 <option class="name" value="descending">Ordenar Z - A</option>
             </select>
 
-            <select class="selectGender">
-                <option value="gender" selected disabled>Gênero</option>
-                <option class="Female" value="grd">Feminino</option>
-                <option class="Male" value="grd">Masculino</option>
+            <select class="selectGender" id="filter">
+                <option value="gender" selected>Gênero</option>
+                <option class="grd" value="Female">Feminino</option>
+                <option class="grd" value="Male">Masculino</option>
             </select>
 
             <div id="divBusca">
                 <input type="text" id="txtSearch" placeholder="Buscar... 🔎" />
             </div>
-        </nav>
-    </header>
-    <main>
-        <div id="cards"></div>
+          </div>
+        <div class="message"></div>
+        <div id="cards"></div> 
     </main>
 
-    <footer>
-        <div class="foot">
+    <footer class="footer">
         <img src="./img/lab-logo.png" alt="Logo Laboratória">
-        <ul style="list-style: none;">
-          <li>
-            Desenvolvido por
+        <p> Desenvolvido por
             <a href="https://github.com/iammarge" target="_blank"> Marjorie Santos</a>
             &
             <a href="https://github.com/asmih" target="_blank">Michelle Santana</a>
-          </li>
-        </ul>
-        <p>SAP008</p>
-      </div>
-       </footer>
+            SAP008.
+        </p>
+    </footer>
 
     <script src="characters.js" type="module"></script>
 

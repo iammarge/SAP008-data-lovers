@@ -1,19 +1,73 @@
+* {
+  font-family: 'Ubuntu Mono', monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display:flex;
+  flex-direction: column;
+  background-color: white;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+header img {
+  height: 6rem;
+  max-width: 100%;
+}
+
+nav ul {
+  display:flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+nav ul li a {
+  padding: 50px 15px;
+}
+
 .navMenu {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin: 3vw 0 0 -1.5vw;
-  padding: 0 2vw;
-  column-gap: 1vw;
+  display: flex;
   font-size: 1.2rem;
   font-weight: 600;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+} 
+
+a {
+  text-decoration: none;
+  color: rgb(24, 118, 40);
+}
+
+main {
+  background-color: black;
+  position: relative;
+}
+
+.filters{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#filter {
+  border-radius: 2rem;
+  background-color: rgb(24, 118, 40);
+  border: solid white 2px;
+  padding: 2px;
+  margin-top: 2rem;
 }
 
 #divBusca {
-  background-color:#8ba0a0f3;
-  width:300px;
+  width:100px;
+  margin-top: 2rem;
 }
 
-#txtBusca {
+#txtSearch {
   background-color:transparent;
   padding-left:5px;
   font-style:italic;
@@ -23,28 +77,203 @@
   width:260px;
 }
 
+.message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.infos {
+  display: grid;
+  column-gap: 15px;
+  row-gap: 15px;
+  justify-content: center;
+  margin: 30px 0;
+  padding: 20px;
+}  
+
+.poster {
+  background-color: #B0E0E6 ;
+  padding: 15px;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#card{
+  position: sticky;
+  top: 15px;
+  width: 100%;
+  height: 100%;
+}
+
+.infoCards{
+  background-color: #B0E0E6;
+  border-radius: 1rem;
+  margin: 7% 20%;
+  padding: 2vw 4vw 2.5vw;
+  min-width: 60%;
+  min-height: 45%;
+  color: black;
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.cardInfo{
+  display: grid;
+  grid-auto-columns: auto;
+}
+
+.close{
+  background-color: #1E90FF;
+  margin-top: 3vw;
+  border: 1px solid;
+  padding: 0.5vw 2vw;
+  border-radius: 0.5vw;
+  cursor: pointer;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
 #cards {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: auto;
-  column-gap: 1vw;
-  row-gap: 1vw;
+  column-gap: 15px;
+  row-gap: 15px;
   justify-content: center;
-  margin: 3vw 0 2vw;
+  margin: 30px 0;
+  padding: 20px;
 }
 
-footer {
-  width: 100%;
+.cardStructure{
+  background-color: #B0E0E6;
+  padding: 15px;
+  border-radius: 1rem;
+  color: black;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
-.foot img {
-  position: absolute;
+.posterCharacters{
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
 }
 
-ul{
-text-align: center;
+.characterName{
+  font-size: 18px;
 }
 
-.foot p {
-  text-align: end;
+.cardInfos{
+  list-style: none;
+  font-size: 16px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  background-color: white;
+  margin-top: 41px;
+}
+
+.footer img {
+  width: 200px;
+}
+
+@media (min-width:500px){
+  nav ul li a {
+    padding: 15px;
+  }
+
+  a {
+    font-size: 18px;
+  }
+
+  #cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .infos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer {
+    font-size: 18px;
+  }
+}
+
+@media (min-width:900px){
+  header img {
+    height: 8rem;
+  }
+
+  nav ul li a {
+    padding: 33px;
+  }
+
+  a {
+    font-size: 25px;
+  }
+
+  #cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .infos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .footer {
+    font-size: 25px;
+  }
+
+  .footer img {
+    width: 250px;
+    }
+}
+
+@media (min-width:1440px){
+  header img {
+    height: 10rem;
+  }
+
+  nav ul li a {
+    padding: 50px;
+  }
+
+  a {
+    font-size: 35px;
+  }
+
+  #cards {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .infos {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  
+  .footer {
+    font-size: 33px;
+    margin-top: 83px;
+  }
+
+  .footer img {
+    width: 310px;
+    }
 }

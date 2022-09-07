@@ -1,27 +1,37 @@
 // SORT BY KEY//
 export const orderByKey = (data, key, order) => {
-  console.log(data, key, order)
+  const copy = [...data]
   if (order === "ascending") {
-      return data.sort((a, b) => {
+      return copy.sort((a, b) => {
     if (a[key] > b[key]) {
       return 1;
     }
     if (a[key] < b[key]) {
       return -1;
     }
-    return 0;
   })}
 
   if (order === "descending") {
-      return data.sort((a, b) => {
+      return copy.sort((a, b) => {
     if (a[key] < b[key]) {
       return 1;
     }
     if (a[key] > b[key]) {
       return -1;
     }
-    return 0;
   })}
+}
+
+// SORT BY SCORE //
+export const orderByScore = (data, order) => {
+  const copy = [...data]
+  const ascending = copy.sort((a, b) => a.rt_score - b.rt_score)
+  if (order === "ascending") {
+    return ascending
+  }
+  else {
+    return ascending.reverse()
+  }
 }
 
 // SEARCH//
@@ -31,24 +41,15 @@ export const searchByKey = (data, key, value) => {
   return resultSearch;
 }
 
-// FILTRO DIREÇÃO
-export const filterDirectors = (films, director) => {
-  return films.filter ((film) => {
-    return film.director === director
+// FILTRO
+export const filterSelect = (films, key, value) => {
+  return films.filter ((select) => {
+    return select[key] === value
   })
 }
 
-// FILTRO GÊNERO
-export const filterGender = (films, gender) => {
-  return films.filter ((chars) => {
-    return chars.gender === gender
-  })
+// CALCULO AGREGADO //
+export function computeStats(total, parcial) {
+  return ((parcial / total) * 100).toFixed(2)
 }
 
-
-/*CALCULO PERSONAGENS
-export const aggregateCal = (chars) => {
-  const totalCharacters = chars.reduce((a, b) => (a + b))
-  return {"total": totalCharacters};
-}
-*/
