@@ -57,7 +57,7 @@ main {
   text-decoration: none; 
 }
 
-#filter {
+select {
   border-radius: 2rem;
   background-color: #B0E0E6;
   border: solid white 2px;
@@ -84,7 +84,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 1rem;
+  padding: 2rem;
+  color: white;
 }
 
 .infos {
