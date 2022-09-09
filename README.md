@@ -3,9 +3,7 @@
 Neste 2º projeto da turma 008 da Laboratória, trabalhamos com manipulações de dados.
 Recebemos os dados da laboratoria com algumas temáticas e escolhemos o Studio Ghibli para nossa página.
 
-Você pode acessar o resultado do projeto aqui: "link do githubpages"
-
-Projeto feito em colaboração entre @iammarge e @as_mih.
+Projeto feito em colaboração entre [@iammarge](https://github.com/iammarge) e [@as_mih](https://github.com/asmih).
 
 ## Índice
 
@@ -19,6 +17,9 @@ Projeto feito em colaboração entre @iammarge e @as_mih.
 ***
 
 ## 1. Introdução
+Segundo a Forbes 90% dos dados que existem hoje foram gerados durante os últimos dois anos. A cada dia geramos 2.5 milhões de terabytes de dados, uma cifra sem precedentes.
+
+Apesar disso, os dados por si só são de pouca utilidade. Para que essas grandes quantidades de dados se convertam em informação compreensível para os usuários, precisamos entender e processar estes dados. Uma forma simples de fazer isso é criando interfaces e visualizações.
 
 ## 2. Resumo do projeto
 O objetivo principal deste projeto é aprender a desenhar e construir uma interface web onde se possa visualizar e manipular dados, entendendo o que o usuário necessita.
@@ -71,10 +72,20 @@ H4:”Eu como fã de Studio Ghibli quero saber quantos filmes meu diretor(a) fav
 O protótipo foi desenvolvido com a ajuda da ferramenta Figma.
 Nós desenvolvemos esse protótipo pensando na tela de smartphone e uma tela de desktop.
 <br>
-Você pode conferir através desses links:
-Desktop https://www.figma.com/file/CNDe4G1hYYnkoFDbnkhCoy/Data-lovers?node-id=8%3A30
-Smartphone
+<br>
+**Desktop** 
+<br>
+<br>
+![Desktop - 1](https://user-images.githubusercontent.com/72046467/189414062-4666edff-6b82-49f2-9b10-a5c39e26a4d8.png)
+<br>
+<br>
+<br>
+**Smartphone**
+<br>
+<br>
 ![Android Large - 1](https://user-images.githubusercontent.com/72046467/189413064-acb7e61b-8401-4b46-99d8-01585375c3be.png)
+<br>
+<br>
 <br>
 Usamos o logo do Studio Ghibli e as cores preto, azul, verde e branco, pois todas as animações são bastante coloridas e achamos que essas cores combinariam com a temática que escolhemos.
 
