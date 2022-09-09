@@ -30,7 +30,7 @@ padding: 50px 15px;
 
 .navMenu {
   display: flex;
-  font-size: 1.2rem;
+  font-size: 18px;
   font-weight: 600;
   justify-content: space-between;
 } 
@@ -51,7 +51,7 @@ main{
 
 .about {
   padding: 22px;
-  font-size: 1rem;
+  font-size: 16px;
   color: white;
 }
 

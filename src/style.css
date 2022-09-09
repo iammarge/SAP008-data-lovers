@@ -54,7 +54,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  text-decoration: none;
 }
 
 #filter {
@@ -113,10 +113,10 @@ main {
 }
 
 #card{
-  position: sticky;
-  top: 15px;
+  position: fixed;
+  top: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 .infoCards{
@@ -125,11 +125,12 @@ main {
   margin: 7% 20%;
   padding: 2vw 4vw 2.5vw;
   min-width: 60%;
-  min-height: 45%;
+  max-height: 90%;
   color: black;
   font-size: 1.25rem;
   font-weight: 400;
   text-align: center;
+  overflow: scroll;
 }
 
 .cardInfo{
@@ -217,6 +218,12 @@ main {
 
   .footer {
     font-size: 18px;
+  }
+}
+
+@media (max-width:500px){
+  .filters{
+    flex-direction: column;
   }
 }
 
