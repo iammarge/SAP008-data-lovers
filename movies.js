@@ -63,7 +63,8 @@ function value(data) {
 info.addEventListener('click', view);
 
 function showInfo() {
-  info.style.display = "block";
+  info.style.display = "block"; 
+  info.classList.add("card_overlay");
 }
 function btnShowInfos() {
   info.style.display = "none";
