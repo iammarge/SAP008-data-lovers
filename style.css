@@ -84,7 +84,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 1rem;
+  padding-top: 2rem;
+  color: white;
 }
 
 .infos {
