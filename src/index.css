@@ -25,7 +25,7 @@ nav ul {
 }
 
 nav ul li a {
-padding: 50px 15px;
+  padding: 0px 5px 50px 5px;
 }
 
 .navMenu {
@@ -33,6 +33,7 @@ padding: 50px 15px;
   font-size: 18px;
   font-weight: 600;
   justify-content: space-between;
+  padding-bottom: 2rem;
 } 
 
 body{
