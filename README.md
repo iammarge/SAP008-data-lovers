@@ -21,7 +21,8 @@ Projeto feito em colaboração entre @iammarge e @as_mih.
 ## 1. Introdução
 
 ## 2. Resumo do projeto
-Esse projeto tem como objetivos de aprendizagem: manipulação de arrays, criação de testes unitários, responsividade, entre outros.
+O objetivo principal deste projeto é aprender a desenhar e construir uma interface web onde se possa visualizar e manipular dados, entendendo o que o usuário necessita.
+Esse projeto tem como objetivos de aprendizagem: Uso de HTML semântico, JavaScript (manipulação de arrays, manuipulação de objetos, uso de funções, criação de testes unitários, uso de condicionais, uso de laços, variáveis...), CSS (uso de flexbox, seletores de CSS...), responsividade,  entre outros.
 
 ## 3. Histórias de usuários
 Fizemos uma pesquisa para ajudar na definição das Histórias de Usuários.
@@ -57,8 +58,11 @@ Fizemos uma pesquisa para ajudar na definição das Histórias de Usuários.
 ### Histórias de Usuários
 
 H1: “Eu como usuário, gostaria de visualizar todos os filmes do studio ghibli em ordem alfabética.”
+<br>
 H2: “ Eu como usuário, quero poder ler a descrição dos filmes e saber o nome, idade e espécie dos personagens principais.”
+<br>
 H3: ” Eu como usuário, gostaria de filtrar os filmes por ano de lançamento.” 
+<br>
 H4:”Eu como fã de Studio Ghibli quero saber quantos filmes meu diretor(a) favorito (a) dirigiu, para saber se já assisti todos.”
 
 
