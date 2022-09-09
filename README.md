@@ -73,12 +73,16 @@ Nós desenvolvemos esse protótipo pensando na tela de smartphone e uma tela de 
 <br>
 Você pode conferir através desses links:
 Desktop https://www.figma.com/file/CNDe4G1hYYnkoFDbnkhCoy/Data-lovers?node-id=8%3A30
-Smartphone https://www.figma.com/file/CNDe4G1hYYnkoFDbnkhCoy/Data-lovers?node-id=0%3A1
+Smartphone
+![Android Large - 1](https://user-images.githubusercontent.com/72046467/189413064-acb7e61b-8401-4b46-99d8-01585375c3be.png)
 <br>
 Usamos o logo do Studio Ghibli e as cores preto, azul, verde e branco, pois todas as animações são bastante coloridas e achamos que essas cores combinariam com a temática que escolhemos.
 
 
 ## 5. Resultados
+
+Durante o processo de desenvolvimento do projeto resolvemos fazer algumas mudanças que interferiram no modelo final da nossa página web, ficando diferente do protótipo inicial.
+Você pode acessar o resultado do projeto aqui: https://iammarge.github.io/SAP008-data-lovers/
 
 ## 6. Ferramentas utilizadas
 
